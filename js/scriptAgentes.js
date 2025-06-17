@@ -3,16 +3,14 @@ const agentes = [
   { nombre: "PHOENIX", imagen: "PhoenixValo.Png" },
   { nombre: "SAGE", imagen: "SageValorant.Png" },
   { nombre: "SOVA", imagen: "SovaValorant.Png" },
-  { nombre: "KILLJOY", imagen: "KilljoyValo.Png" },
+  { nombre: "JETT", imagen: "JettValo.Png" },
   { nombre: "VIPER", imagen: "ViperValo.Png" },
   { nombre: "CYPHER", imagen: "CypherValo.Png" },
   { nombre: "REYNA", imagen: "ReynaValo.Png" },
-  { nombre: "OMEN", imagen: "OmenValo.Png" },
-  { nombre: "RAZE", imagen: "RazeValo.Png" },
-  { nombre: "JETT", imagen: "JettValo.Png" },
-  { nombre: "SKYE", imagen: "SkyeValo.Png" }
-
-  
+  { nombre: "KILLJOY", imagen: "KilljoyValo.Png" },
+  { nombre: "OMEN", imagen: "OmenValo.Png" },
+  { nombre: "RAZE", imagen: "RazeValo.Png" },
+  { nombre: "SKYE", imagen: "SkyeValo.Png" }
 ];
 
 const grid = document.getElementById("agentesGrid");
@@ -27,4 +25,21 @@ agentes.forEach(agente => {
 
   card.appendChild(img);
   grid.appendChild(card);
+});
+
+// Observer para animación al hacer scroll
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    } else {
+      entry.target.classList.remove('visible');
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+document.querySelectorAll('.agent-card').forEach(card => {
+  observer.observe(card);
 });

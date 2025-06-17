@@ -1,0 +1,90 @@
+@font-face 
+{
+  font-family: "Valorant";
+  src: url(../fonts/Valorant\ Font.ttf);
+}
+
+.navbar {
+  background-color: #fffbf5;
+  padding: 1em 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999; 
+}
+
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 8em;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  color: #ff4654;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #ba3a46;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Valorant', sans-serif;
+  background-image: url(../media/images/ValorantBackground.jpg);
+  background-size: 120% 120%;
+  background-repeat: no-repeat;
+  color: #ff4654;
+  text-align: center;
+}
+
+.game-container {
+  padding: 6em 2em 2em
+}
+
+#game-area {
+  position: relative;
+  width: 80vw;
+  height: 60vh;
+  margin: 2em auto;
+  background-image: url(../media/images/Valorantshooting.webp);
+  background-size: 105%;
+  border: 2px solid #ff4654;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.target {
+  position: absolute;
+  cursor: pointer;
+  transition: transform 0.1s;
+  user-select: none;
+}
+
+.target:hover {
+  transform: scale(1.2);
+}
+
+#start-btn {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #ff4654;
+  color: #fffbf5;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#start-btn:hover {
+  background-color: #ba3a46;
+}

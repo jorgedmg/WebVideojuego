@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clicker Game</title>
+  <link rel="stylesheet" href="css/styleClicker.css" />
+</head>
+<body>
+    <nav class="navbar">
+  <ul>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="mapas.html">Mapas</a></li>
+    <li><a href="agentes.html">Agentes</a></li>
+  </ul>
+</nav>
+
+  <div class="game-container">
+    <h1>Campo de tiro</h1>
+    <p>Puntuación: <span id="score">0</span></p>
+    <p>Tiempo restante: <span id="timer">30</span> segundos</p>
+
+
+    <!-- Selector de dificultad -->
+    <label for="difficulty">Dificultad:</label>
+    <select id="difficulty">
+      <option value="facil">Fácil</option>
+      <option value="medio" selected>Medio</option>
+      <option value="dificil">Difícil</option>
+    </select>
+
+    <div id="game-area"></div>
+    <button id="start-btn">Iniciar</button>
+  </div>
+
+  <script src="js/clicker.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valorant</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <h1></h1>
+  <header class="header">
+
+    <div class="menu container">
+        <a href="#" class="logo">Valorant</a>
+        <input type="checkbox" id="menu"/>
+        <label for="menu">
+            <img src="media/images/MenuButton.png" class="menu-icono" alt="">
+        </label>
+        <nav class="navbar">
+            <ul>
+                <li><a href="mapas.html">Mapas</a></li>
+                <li><a href="agentes.html">Agentes</a></li>
+            </ul>
+        </nav>
+
+    </div>
+    
+
+    <div class="header-content container">
+
+        <h1>Valorant</h1>
+        <p>
+            Valorant es un videojuego de disparos tácticos en primera persona desarrollado y publicado por Riot Games.
+        </p>
+    </div>
+  </header>
+
+ 
+  <section class="info">
+    <div class="info-1">
+        <h2>Mapas</h2>
+        <p>
+            Cada mapa es un campo de juego para que despiertes tu creatividad. Diseñado específicamente para estrategias de equipo, jugadas espectaculares y momentos clave. Crea la jugada que otros imitarán durante años.
+        </p>
+        <a href="mapas.html" class="btn-1">Mapas</a>
+    </div>
+    <div class="info-2"></div>
+  </section>
+
+  <section class="info">
+    <div class="info-3"></div>
+    <div class="info-1">
+        <h2>AGENTES</h2>
+        <p>
+            Aparte de las armas y las balas, tendréis a un agente con habilidades letales, adaptables y ágiles que os brindarán oportunidades para demostrar vuestro dominio de las armas. No hay dos agentes iguales, del mismo modo que no hay momentos destacados idénticos.
+        </p>
+        <a href="agentes.html" class="btn-1">Agentes</a>
+    </div>
+  </section>
+
+  
+  <section class="trailer container" style="text-align: center;">
+    <h2>Tráiler</h2>
+    <div class="trailer-content" style="display: flex; justify-content: center;">
+        <iframe width="560" height="315" src="media/videos/ValorantTrailer.mp4" 
+                title="Tráiler de Valorant" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+        </iframe>
+    </div>
+    <a href="https://playvalorant.com/es-es/platform-selection/" target="_blank" 
+       style="display: inline-block; margin-top: 15px; text-decoration: none; background: #ff4654; padding: 10px 20px; border-radius: 5px; color: #111823; font-weight: bold;">
+        Accede al juego
+    </a>
+  </section>
+
+  <section class="contact-form container">
+    <h2>Contacto</h2>
+    <form id="contactForm">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Mensaje:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        
+        <button type="submit" class="btn-1">Enviar</button>
+    </form>
+    <p id="successMessage" style="display: none; color: green; margin-top: 10px;">
+        ¡Mensaje enviado!
+    </p>
+  </section>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault(); 
+        document.getElementById("successMessage").style.display = "block"; 
+        this.reset(); 
+        
+        setTimeout(function() {
+            document.getElementById("successMessage").style.display = "none";
+        }, 2000); 
+    });
+  </script>
+
+
+</body>
+</html>
